@@ -1,53 +1,31 @@
 # Adafruit Featherwing OLED Demo
 
+A great project for getting started in the world of Arduino and the Adafruit Featherwing. This project is based on the [Adabox 003](https://www.adafruit.com/adabox003) which came with a Feather HUZZAH with ESP8266 WiFi board and a Featherwing OLED - 128x32 screen. The aim of this project is for beginner's like myself to learn data API's, data feeds, and Arduino. 
+
+What's cooler than a computer smaller than a box of matches with a screen?
+
 This repository contains files used for the Adafruit Featherwing OLED Demo that is [here](https://learn.adafruit.com/digital-display-badge?embeds=allow) .
 
+## Pre-install Checklist
+- Install all libraries necessary for the [Feather HUZZAH](https://learn.adafruit.com/adafruit-feather-huzzah-esp8266) board
+- Add the following libraries within Arduino IDE. The [Adafruit MQTT](https://github.com/adafruit/Adafruit_MQTT_Library) library and  [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306). These will be referenced in the code.
 
-## Manual Arduino BSP Setup
+## Code modification
+Within the code on the Adafruit site there is frequent mention of **PROGMEM**. Through a [troubleshooting session](https://forums.adafruit.com/viewtopic.php?f=57&t=114134&p=570426) it was made aware that PROGMEM is now an obsolete command. Simply remove this from the code from Adafruit or simply use the code I have available in this repository
 
-The preferred method of installing the WICED Feather BSP is to use the Adafruit WICED package from the Arduino Board Manager, but if you wish to maintain the git repo to contribute pull requests you can manually install this BSP with the following setup procedure:
-
-- Create a **hardware/adafruit** folder in `~/Documents/Arduino` (OS X) or
-  `My Documents\Arduino` (Windows) if it doesn't already exist
-- Clone this repo to the root of the `hardware/adafruit` folder, or download as a .zip and
-  unzip it into `hardware/adafruit/wiced`
-
-	```
-	git clone https://github.com/adafruit/Adafruit_WICED_Arduino.git
-	```
-	
-- You should end up with a folder structure like this:
+- Assuming you are using the provided code from this repository, you will only need to modify the following lines of code to fit your environment
 
 	```
-        .
-        └── Arduino
-            ├── hardware
-            │   └── adafruit
-            │       └── wiced
-            │           ├── README.md
-            │           ├── boards.txt
-            │           ├── bootloader
-            │           ├── changelog.md
-            │           ├── cores
-            │           ├── drivers
-            │           ├── featherlib
-            │           ├── keywords.txt
-            │           ├── libraries
-            │           ├── platform.txt
-            │           ├── programmers.txt
-            │           ├── tools
-            │           └── variants
+    //Wifi information
+    const char* ssid     = "XXX";
+    const char* password = "XXX";
+ 
+    // Adafruit IO aka the data feed info
+    #define AIO_SERVER      "io.adafruit.com"
+    #define AIO_SERVERPORT  1883
+    #define AIO_USERNAME    "XXX"
+    #define AIO_KEY         "XXXX"
+        
 	```
 	
-- Install the necessary GCC toolchain for ARM: Tools->Board->Board Manager --> Download **Arduino SAM Boards (32-bits ARM Cortex-M3)**
-- Restart the Arduino IDE
-ew Windows binary will need to be generated.  Follow the steps below
-on a Windows machine with the **32-bit version** of Python (for maximum compatibility
-with all Windows versions, since 32-bit executables can run on 64-bit Windows too).
-
-First you need to install the dependencies of the script.  This is only done
-once (unless the dependencies change).  From inside the `tools/source/feather_dfu`
-folder run:
-```
-pip install -r requirements.txt --pre
-```
+When all is said and done, you should have a wearable badge that will hook into a data feed. Awesome!
