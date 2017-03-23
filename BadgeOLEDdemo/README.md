@@ -11,7 +11,7 @@ This repository contains files used for the Adafruit Featherwing OLED Demo that 
 - Add the following libraries within Arduino IDE. The [Adafruit MQTT](https://github.com/adafruit/Adafruit_MQTT_Library) library and  [Adafruit SSD1306](https://github.com/adafruit/Adafruit_SSD1306). These will be referenced in the code.
 
 ## Code modification
-Within the code on the Adafruit site there is frequent mention of **PROGMEM**. Through a [troubleshooting session](https://forums.adafruit.com/viewtopic.php?f=57&t=114134&p=570426) it was made aware that PROGMEM is now an obsolete command. Simply remove this from the code from Adafruit or simply use the code I have available in this repository
+Within the code on the Adafruit site there is frequent mention of **PROGMEM**. Through a [troubleshooting session](https://forums.adafruit.com/viewtopic.php?f=57&t=114134&p=570426) it was made aware that PROGMEM is now an obsolete command. Simply remove this from the code from Adafruit or simply use the code I have available in this repository.
 
 - Assuming you are using the provided code from this repository, you will only need to modify the following lines of code to fit your environment
 
