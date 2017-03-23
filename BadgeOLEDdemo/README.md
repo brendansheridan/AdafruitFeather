@@ -1,6 +1,6 @@
 # Adafruit Featherwing OLED Demo
 
-A great project for getting started in the world of Arduino and the Adafruit Featherwing. This project is based on the [Adabox 003](https://www.adafruit.com/adabox003) which came with a Feather HUZZAH with ESP8266 WiFi board and a Featherwing OLED - 128x32 screen. The aim of this project is for beginner's like myself to learn data API's, data feeds, and Arduino. 
+A great project for getting started in the world of Arduino and the Adafruit Featherwing. This project is based on the **[Adabox 003](https://www.adafruit.com/adabox003)** which came with a Feather HUZZAH with ESP8266 WiFi board and a Featherwing OLED - 128x32 screen. The aim of this project is for beginner's like myself to learn data API's, data feeds, and Arduino. 
 
 What's cooler than a computer smaller than a box of matches with a screen?
 
