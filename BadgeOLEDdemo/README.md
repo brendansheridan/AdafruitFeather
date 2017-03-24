@@ -28,4 +28,8 @@ Within the code on the Adafruit site there is frequent mention of **PROGMEM**. T
         
 	```
 	
-When all is said and done, you should have a wearable badge that will hook into a data feed. Awesome!
+When all is said and done, you should have a wearable badge that will hook into a data feed. 
+
+![ScreenShot](http://i.imgur.com/qNekUBo.jpg)
+
+Awesome!
